@@ -1,7 +1,7 @@
 import './style.css';
 import "bootstrap";
 // import './scss/app.scss';
-import key from './key';
+import key from '../key';
 
 const content = document.getElementById('content');
 

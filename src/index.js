@@ -1,16 +1,17 @@
 import './style.css';
-import Tamales from './images/tamales.jpg';
+import "bootstrap";
+// import './scss/app.scss';
+import key from './key';
 
-// function myComponent() {
-//   const el = document.getElementById('content')
+const content = document.getElementById('content');
 
-//   const image = new Image();
-//   image.src = Tamales;
 
-//   el.appendChild(image);
+const city = "Madrid"
+async function getWeather() {
+  const url = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key.apiKey}`, {mode: 'cors'});
+  const json = await url.json()
+  console.log(json)
+  // return json
+}
 
-//   return el
-// }
-
-// document.body.appendChild(myComponent());
-console.log('yo dis crazy');
+getWeather()
